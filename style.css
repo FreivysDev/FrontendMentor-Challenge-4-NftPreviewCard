@@ -1,0 +1,151 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%, 0.5);
+  --bg-main: hsl(217, 54%, 11%); /* Main */
+  --bg-card: hsl(216, 50%, 16%); /* Card */
+  --line: hsl(215, 32%, 27%); /* Line */
+  --white: hsl(0, 0%, 100%);
+  --font: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: var(--font);
+  font-size: 18px;
+}
+
+.card-container {
+  background-color: var(--bg-card);
+  width: 330px;
+  height: 545px;
+  margin: 60px auto;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.card__img {
+  background-image: url(./images/image-equilibrium.jpg);
+  background-size: cover;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-bottom: 26px;
+  overflow: hidden;
+}
+
+.card__img-eye {
+  opacity: 0;
+  background-color: var(--cyan);
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card__img-eye:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card__title {
+  color: var(--white);
+  font-size: 1.3em;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.card__title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card__description {
+  font-size: 0.9em;
+  color: var(--soft-blue);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.card__main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.card__value-eth {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.card__time {
+  color: var(--soft-blue);
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.footer__avatar {
+  background-image: url(./images/image-avatar.png);
+  width: 36px;
+  height: 36px;
+  background-size: cover;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.footer__creator {
+  color: var(--soft-blue);
+  font-size: 0.85em;
+  margin-left: 15px;
+}
+
+.footer__author {
+  color: var(--white);
+}
+
+.footer__author:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 900px) {
+  .card-container {
+    width: 355px;
+    height: 600px;
+  }
+
+  .card__img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card__description {
+    font-size: 1em;
+  }
+
+  .footer {
+    padding-top: 20px;
+  }
+}
