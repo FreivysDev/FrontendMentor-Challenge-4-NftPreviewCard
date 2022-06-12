@@ -20,6 +20,13 @@ body {
   font-size: 18px;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .card-container {
   background-color: var(--bg-card);
   width: 330px;
